@@ -1,1 +1,1 @@
-# -peeteko-Find-a-repository-epfadapter-resource-server-publickey
+# epfadapter-resource-server-traditional
