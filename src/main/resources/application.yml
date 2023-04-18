@@ -3,5 +3,4 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: https://ssociam-np.bpost.cloud
-          jwk-set-uri: https://ssociam-np.bpost.cloud/pf/JWKS
+          public-key-location: classpath:publickey.crt
