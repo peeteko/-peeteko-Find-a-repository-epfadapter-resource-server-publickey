@@ -1,6 +1,7 @@
 package be.bpost.epfadapter.controller;
 
 import be.bpost.epfadapter.common.enums.Language;
+import be.bpost.epfadapter.common.enums.PlatformType;
 import be.bpost.epfadapter.common.enums.State;
 import be.bpost.epfadapter.domain.dtos.ConnectionDto;
 
@@ -9,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.jwt.Jwt;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -43,6 +45,7 @@ public class ConnectionsController {
         connectionDto1.setShopId(shopId);
         connectionDto1.setLanguage(language);
         connectionDto1.setState(state);
+        connectionDto1.setPlatformType(PlatformType.SHOPIFY);
         try {
             connectionDto1.setShopAdminLink(URI.create("https://"+shopId+"/admin").toURL());
             connectionDto1.setAuthorizationUrl(URI.create("https://"+shopId+"/authorize").toURL());
